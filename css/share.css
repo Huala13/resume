@@ -100,6 +100,11 @@ header {
   padding: 50px;
   height: 80vh;
 }
+@media (max-width: 1024px) {
+  header {
+    height: 70vh;
+  }
+}
 @media (max-width: 767px) {
   header {
     left: -300px;

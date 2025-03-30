@@ -32,19 +32,40 @@ img {
   display: block;
 }
 
+section.content {
+  min-height: calc(100vh - 300px);
+}
 section.content .mainTitle {
-  font-size: 7vw;
-  font-family: "Noto Serif TC", serif;
+  font-size: 6.9vw;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  line-height: 1.3em;
   margin-bottom: 5vw;
 }
 @media (max-width: 767px) {
   section.content .mainTitle {
     font-size: 10vw;
   }
+}
+section.content .mainTitle .cursor::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+section.content .mainTitle .done .cursor::after {
+  content: "";
+  animation: none;
+}
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+section.content .mainTitle div {
+  font-family: "Noto Serif TC", serif;
+  line-height: 1.3em;
 }
 section.content .subTitle {
   font-size: 1rem;
@@ -53,4 +74,21 @@ section.content .subTitle {
   font-weight: 500;
   font-style: normal;
   line-height: 2rem;
+  white-space: pre;
+}
+section.content .subTitle .cursor::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+section.content .subTitle .done .cursor::after {
+  content: "";
+  animation: none;
+}
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=index.css.map */

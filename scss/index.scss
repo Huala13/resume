@@ -1,15 +1,36 @@
 @import "set";
 section.content {
+  min-height: calc(100vh - 300px);
   .mainTitle {
-    font-size: 7vw;
-    font-family: "Noto Serif TC", serif;
+    font-size: 6.9vw;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    line-height: 1.3em;
     margin-bottom: 5vw;
     @include mobile {
       font-size: 10vw;
+    }
+    .cursor::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+    }
+    .done .cursor::after {
+      content: "";
+      animation: none;
+    }
+    @keyframes blink {
+      0%,
+      50% {
+        opacity: 1;
+      }
+      50.01%,
+      100% {
+        opacity: 0;
+      }
+    }
+    div {
+      font-family: "Noto Serif TC", serif;
+      line-height: 1.3em;
     }
   }
   .subTitle {
@@ -19,5 +40,24 @@ section.content {
     font-weight: 500;
     font-style: normal;
     line-height: 2rem;
+    white-space: pre;
+    .cursor::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+    }
+    .done .cursor::after {
+      content: "";
+      animation: none;
+    }
+    @keyframes blink {
+      0%,
+      50% {
+        opacity: 1;
+      }
+      50.01%,
+      100% {
+        opacity: 0;
+      }
+    }
   }
 }

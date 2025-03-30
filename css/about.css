@@ -46,10 +46,18 @@ img {
 .content .flex {
   margin-top: 100px;
   display: flex;
+  gap: 50px;
 }
 .content .flex .photo {
   width: 400px;
 }
 .content .flex .photo img {
   width: 100%;
+}
+.content .flex .textBox .title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.content .flex .textBox .text {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=about.css.map */

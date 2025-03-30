@@ -12,10 +12,20 @@
   .flex {
     margin-top: 100px;
     display: flex;
+    gap: 50px;
     .photo {
       width: 400px;
       img {
         width: 100%;
+      }
+    }
+    .textBox {
+      .title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      .text {
+        font-size: 1.2rem;
       }
     }
   }
