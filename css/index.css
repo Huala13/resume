@@ -32,9 +32,6 @@ img {
   display: block;
 }
 
-section.content {
-  min-height: calc(100vh - 300px);
-}
 section.content .mainTitle {
   font-size: 6.9vw;
   font-optical-sizing: auto;

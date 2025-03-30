@@ -44,9 +44,14 @@ img {
 }
 
 .content .flex {
-  margin-top: 100px;
+  padding: 100px 0;
   display: flex;
   gap: 50px;
+}
+@media (max-width: 1024px) {
+  .content .flex {
+    flex-wrap: wrap;
+  }
 }
 .content .flex .photo {
   width: 400px;
@@ -54,10 +59,25 @@ img {
 .content .flex .photo img {
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .content .flex .textBox {
+    width: 100%;
+  }
+}
 .content .flex .textBox .title {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+@media (max-width: 767px) {
+  .content .flex .textBox .title {
+    font-size: 1.7rem;
+  }
+}
 .content .flex .textBox .text {
   font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+  .content .flex .textBox .text {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=about.css.map */

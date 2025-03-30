@@ -10,9 +10,12 @@
 }
 .content {
   .flex {
-    margin-top: 100px;
+    padding: 100px 0;
     display: flex;
     gap: 50px;
+    @include pad {
+      flex-wrap: wrap;
+    }
     .photo {
       width: 400px;
       img {
@@ -20,12 +23,21 @@
       }
     }
     .textBox {
+      @include pad {
+        width: 100%;
+      }
       .title {
         font-size: 2rem;
         margin-bottom: 20px;
+        @include mobile {
+          font-size: 1.7rem;
+        }
       }
       .text {
         font-size: 1.2rem;
+        @include mobile {
+          font-size: 1rem;
+        }
       }
     }
   }
