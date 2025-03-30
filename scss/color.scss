@@ -1,0 +1,29 @@
+$colorMain: #fdd108;
+$colorSub: #ccb78f;
+$colorText: #222;
+$colorTitle: #222;
+@mixin pc {
+  @media (max-width: 1919px) {
+    @content;
+  }
+}
+@mixin mac {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin mobile2 {
+  @media (max-width: 380px) {
+    @content;
+  }
+}

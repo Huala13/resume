@@ -1,0 +1,193 @@
+@import "set";
+#burger {
+  display: none;
+  flex-wrap: wrap;
+  width: 30px;
+  position: fixed;
+  left: 20px;
+  top: 30px;
+  transition: left 0.5s;
+  @include mobile {
+    display: flex;
+  }
+  div {
+    height: 2px;
+    width: 100%;
+    background-color: $colorText;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 80%;
+      background-color: $colorText;
+      top: -10px;
+      transition: transform 0.5s;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 80%;
+      background-color: $colorText;
+      bottom: -10px;
+      transition: transform 0.5s;
+    }
+  }
+}
+header.active {
+  left: 0;
+  background: #fff;
+}
+#burger.active {
+  left: 255px;
+  z-index: 1;
+  div {
+    width: 0;
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &::after {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+header {
+  position: fixed;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  height: 80vh;
+  @include mobile {
+    left: -300px;
+    height: 100vh;
+    transition: left 0.5s;
+  }
+  .item {
+    font-size: 2rem;
+    font-weight: 400;
+    width: fit-content;
+    margin-bottom: 5px;
+  }
+  .item.active {
+    color: $colorSub;
+    border-bottom: 2px solid;
+  }
+  a {
+    left: 0;
+    transition: left 0.2s;
+  }
+  a:hover {
+    position: relative;
+    left: 5px;
+  }
+  .info {
+    margin-top: 20px;
+    font-size: 0.75rem;
+  }
+  .nameEnBox {
+    width: 100%;
+    align-content: end;
+    font-size: 2.5rem;
+    .nameEn {
+      position: relative;
+      color: $colorSub;
+      width: fit-content;
+      font-family: "Noto Serif TC", serif;
+      font-weight: 500;
+      padding: 0px 10px;
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+        box-sizing: border-box;
+      }
+      &::before {
+        left: 0;
+        top: 0;
+      }
+      &::after {
+        right: 0;
+        bottom: 0;
+      }
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+      &:hover::before {
+        border-top-color: $colorSub;
+        border-right-color: $colorSub;
+        transition: width 0.4s ease-out, height 0.4s ease-out 0.4s;
+      }
+      &:hover::after {
+        border-bottom-color: $colorSub;
+        border-left-color: $colorSub;
+        transition: border-color 0s ease-out 0.8s, width 0.4s ease-out 0.8s,
+          height 0.4s ease-out 1.2s;
+      }
+    }
+  }
+}
+section.content {
+  padding: 20px 20px 50px 300px;
+  min-height: 60vh;
+  @include mobile {
+    padding: 70px 20px 50px 20px;
+  }
+}
+footer {
+  background: #242423;
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 5vw 20vw 5vw 200px;
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+      justify-content: space-between;
+    }
+  }
+  .copyRight {
+    text-align: center;
+    padding: 1vw;
+    @include mobile {
+      text-align: start;
+      padding: 20px 40px;
+    }
+  }
+  div {
+    color: #fff;
+  }
+  .itemBox {
+    @include mobile {
+      width: 100%;
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    a {
+      left: 0;
+      transition: left 0.2s;
+    }
+    a:hover {
+      position: relative;
+      left: 5px;
+    }
+  }
+  i {
+    color: #fff;
+  }
+}

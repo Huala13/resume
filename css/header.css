@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0em;
+  word-spacing: 0.1em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  display: block;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+header .item {
+  font-size: 2rem;
+  font-weight: 500;
+  width: fit-content;
+}
+header .item.active {
+  color: #ccb78f;
+  border-bottom: 2px solid;
+}
+header .info {
+  margin-top: 20px;
+  font-size: 0.75rem;
+}
+header .nameEnBox {
+  width: 100%;
+}/*# sourceMappingURL=header.css.map */

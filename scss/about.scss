@@ -1,0 +1,22 @@
+@import "set";
+
+.mainTitle {
+  font-family: "Noto Serif TC", serif;
+  font-size: 6rem;
+  font-weight: 700;
+  @include mobile {
+    font-size: 10vw;
+  }
+}
+.content {
+  .flex {
+    margin-top: 100px;
+    display: flex;
+    .photo {
+      width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
